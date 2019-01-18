@@ -8,7 +8,7 @@ npm run build<br/>
 npm start<br/>
 
 #Exercise-1 Rendering React to DOM<br/>
-Render "Hello from React" to the div in index.html with an id of "root".
+Render "Hello from React" to the div in index.html with an id of "app".
 
 #Exercise-2 Creating a Functional Component in React<br/>
 Create folder called Components within the client folder. Inside of components folder, create a file called App.jsx and build out a functional react component in that file that renders "Hello from Component" onto the DOM.
