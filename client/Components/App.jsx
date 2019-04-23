@@ -33,8 +33,8 @@ class App extends React.Component {
           {this.state.lastName} <br /> 
           Last Name: <input name="last" onChange={this.enterLast} />
         </div>
-        
-        <List />
+
+        {this.state.firstName === 'Jennifer' && this.state.lastName === 'Haren' ? <List /> : null}
       
       </div>
     );
