@@ -11,6 +11,8 @@ class List extends React.Component {
     this.enterText = this.enterText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   enterText(event) {
@@ -35,6 +37,25 @@ class List extends React.Component {
     alert(itemName);
   }
 
+  handleDelete(index) {
+    let todos = this.state.myArray.slice();
+    todos.splice(index, 1);
+    this.setState({
+      myArray: todos
+    });
+  }
+
+  handleEdit(index) {
+    let todos = this.state.myArray.slice();
+    let newTodo = prompt('Edit: ', todos[index]);
+    console.log(newTodo);
+    todos[index] = newTodo;
+    console.log('UPDATED TODOS: ', todos);
+    this.setState({
+      myArray: todos
+    });
+  }
+
   render() {
     return (
       <div>
@@ -49,7 +70,10 @@ class List extends React.Component {
         This is myArray: {this.state.myArray} <br />
         
         <div>
-          {this.state.myArray.map(item => <ListEntry key={item} item={item} handleClick={this.handleClick} />)}  
+          {this.state.myArray.map((item, index) => { 
+           return <ListEntry index={index} key={item} item={item} handleClick={this.handleClick} handleDelete={this.handleDelete} handleEdit={this.handleEdit} />
+          })
+        }  
         </div>
       
       </div>
