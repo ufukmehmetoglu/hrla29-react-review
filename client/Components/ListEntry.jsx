@@ -2,7 +2,7 @@ import React from 'react';
 
 const ListEntry = (props) => {
   return (
-    <div>
+    <div id={props.item} onClick={props.handleClick}>
       ListEntry: {props.item}
     </div>
   )

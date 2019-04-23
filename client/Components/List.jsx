@@ -10,6 +10,7 @@ class List extends React.Component {
     };
     this.enterText = this.enterText.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   enterText(event) {
@@ -29,6 +30,11 @@ class List extends React.Component {
     document.getElementById('myForm').reset();
   }
 
+  handleClick(event) {
+    let itemName = event.target.id;
+    alert(itemName);
+  }
+
   render() {
     return (
       <div>
@@ -43,7 +49,7 @@ class List extends React.Component {
         This is myArray: {this.state.myArray} <br />
         
         <div>
-          {this.state.myArray.map(item => <ListEntry key={item} item={item} />)}  
+          {this.state.myArray.map(item => <ListEntry key={item} item={item} handleClick={this.handleClick} />)}  
         </div>
       
       </div>
