@@ -1,4 +1,5 @@
 import React from 'react';
+import ListEntry from './ListEntry.jsx';
 
 class List extends React.Component {
   constructor(props) {
@@ -32,12 +33,19 @@ class List extends React.Component {
     return (
       <div>
         Hello from List!!!
+        
         <form id="myForm">
           <input type="text" onChange={this.enterText} />
           <input type="submit" value="submit" onClick={this.handleSubmit} />
         </form>
+        
         This is myString: {this.state.myString} <br />
         This is myArray: {this.state.myArray} <br />
+        
+        <div>
+          {this.state.myArray.map(item => <ListEntry key={item} item={item} />)}  
+        </div>
+      
       </div>
     )
   }
