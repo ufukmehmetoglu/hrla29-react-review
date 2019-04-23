@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './List.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,10 +26,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.firstName} <br /> 
-        First Name: <input name="first" onChange={this.enterFirst} /><br />
-        {this.state.lastName} <br /> 
-        Last Name: <input name="last" onChange={this.enterLast} />
+        
+        <div>
+          {this.state.firstName} <br /> 
+          First Name: <input name="first" onChange={this.enterFirst} /><br />
+          {this.state.lastName} <br /> 
+          Last Name: <input name="last" onChange={this.enterLast} />
+        </div>
+        
+        <List />
+      
       </div>
     );
   }
