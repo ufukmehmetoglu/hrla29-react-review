@@ -1,6 +1,6 @@
 # react-review
 
-HRLA27-react-review
+HRLA29-react-review
 
 #Start Server<br/>
 npm install<br/>
@@ -13,7 +13,7 @@ Render "Hello from React" to the div in index.html with an id of "app".
 #Exercise-2 Creating a Functional Component in React<br/>
 Create folder called Components within the client folder. Inside of components folder, create a file called App.jsx and build out a functional react component in that file that renders "Hello from Component" onto the DOM.
 
-#Exercise-3 Passing Props into A Funcitonal Component<br/>
+#Exercise-3 Passing Props into A Functional Component<br/>
 Pass your first and last name down as props to your component from index.jsx
 
 #Exercise-4 Refactoring a Functional Component to a Stateful Component<br/>
