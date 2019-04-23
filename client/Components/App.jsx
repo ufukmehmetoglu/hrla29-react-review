@@ -1,9 +1,9 @@
 import React from 'react';
 
-const App = () => {
+const App = (props) => {
   return (
     <div>
-      Hello from Component!
+      First Name: {props.firstName} Last Name: {props.lastName}
     </div>
   );
 }
